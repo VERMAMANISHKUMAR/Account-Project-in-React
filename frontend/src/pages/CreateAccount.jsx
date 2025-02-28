@@ -32,7 +32,7 @@ const AccountForm = () => {
 
     try {
       // API call karne ke liye fetch function use kar rahe hain
-      const response = await fetch("http://localhost:5000/api/accounts", {
+      const response = await fetch("https://account-project-in-react-backend.onrender.com/api/accounts", {
         method: "POST", // POST request bhej rahe hain
         headers: {
           "Content-Type": "application/json", // JSON data bhejne ka type define kar rahe hain

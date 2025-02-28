@@ -22,7 +22,7 @@ const AccountList = () => {
   useEffect(() => {
     const fetchAccounts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/accounts'); // API se data fetch kr rhe hain
+        const response = await fetch('https://account-project-in-react-backend.onrender.com/api/accounts'); // API se data fetch kr rhe hain
         if (!response.ok) throw new Error('Failed to fetch accounts');
         const data = await response.json(); // JSON format me data convert kr rhe hain
         setAccounts(data); // Accounts state update kr rhe hain
