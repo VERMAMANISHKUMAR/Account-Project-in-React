@@ -1,6 +1,6 @@
-// import { FaTimes } from 'react-icons/fa';
-import { MdDashboard, MdPerson } from 'react-icons/md';
-import { AiFillFolderOpen, AiFillEdit } from 'react-icons/ai';
+import { MdDashboard, MdAccountBalance } from 'react-icons/md';
+import { AiFillFolderOpen, AiOutlineTransaction } from 'react-icons/ai';
+import { FaMoneyCheckAlt } from 'react-icons/fa';
 import {
           SidebarContainer,
           Logo as SidebarLogo, // Use Logo but rename it to SidebarLogo
@@ -22,7 +22,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           isOpen={isOpen}
           activeClassName="active"
         >
-          <MdDashboard />
+          <MdAccountBalance />
           <span>Create Account</span>
         </SidebarLink>
       
@@ -40,14 +40,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           activeClassName="active"
         >
           <AiFillFolderOpen />
-          <span>Meney Transfer List</span>
+          <span>Money Transfer List</span>
         </SidebarLink>
         <SidebarLink 
           to="/depositlist" 
           isOpen={isOpen}
           activeClassName="active"
         >
-          <AiFillEdit />
+          <FaMoneyCheckAlt />
           <span>Deposit List</span>
         </SidebarLink>
         <SidebarLink 
@@ -55,7 +55,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           isOpen={isOpen}
           activeClassName="active"
         >
-          <MdPerson />
+          <AiOutlineTransaction />
           <span>Cash Transaction</span>
         </SidebarLink>
       </SidebarMenu>
