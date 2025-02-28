@@ -1,6 +1,6 @@
 const Account = require('../models/Account');
 
-// ✅ Generate Unique Account Number
+//We are Generate the Unique Account Number
 const generateAccountNumber = async () => {
   let isUnique = false;
   let accountNumber;
@@ -14,19 +14,19 @@ const generateAccountNumber = async () => {
   return accountNumber;
 };
 
-// ✅ Create New Account
+//We are Create the New Account
 exports.createAccount = async (req, res) => {
   try {
     const { accountName, accountHolderName, balance, createdBy } = req.body;
 
     if (!accountName || !accountHolderName || !createdBy) {
-      return res.status(400).json({ message: '❌ All fields are required' });
+      return res.status(400).json({ message: ' All fields are required' });
     }
 
-    // ✅ Generate Unique Account Number
+    // Generate Unique Account Number
     let accountNumber = await generateAccountNumber();
 
-    // ✅ Create New Account
+    //  Create New Account
     const newAccount = new Account({
       accountNumber,
       accountName,
@@ -36,11 +36,11 @@ exports.createAccount = async (req, res) => {
     });
 
     await newAccount.save();
-    res.status(201).json({ message: '✅ Account Created Successfully', account: newAccount });
+    res.status(201).json({ message: 'Account Created Successfully', account: newAccount });
 
   } catch (error) {
-    console.error('❌ Error Creating Account:', error);
-    res.status(500).json({ message: '❌ Internal Server Error' });
+    console.error('Error Creating Account:', error);
+    res.status(500).json({ message: 'Internal Server Error' });
   }
 };
 
