@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-   "dev": "vite --host",
+    "dev": "vite",
     "build": "vite build",
-    "start": "serve -s dist -l $PORT",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "serve -s dist -l $PORT"
+   
   },
   "dependencies": {
     "jspdf": "^3.0.0",
