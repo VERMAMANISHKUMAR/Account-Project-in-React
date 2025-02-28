@@ -1,0 +1,104 @@
+.account-dashboard {
+          font-family: 'Poppins', sans-serif;
+          max-width: 1000px;
+          margin: 50px auto;
+          padding: 25px;
+          background: #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          margin-right: 10px;
+        }
+        
+        .dashboard-title {
+          margin-bottom: 20px;
+          color: #333;
+        }
+        
+        .time-filters {
+          margin-bottom: 20px;
+          margin-left: 35rem;
+        }
+        
+        .time-filter {
+          padding: 8px 15px;
+          margin-right: 10px;
+          border: none;
+          border-radius: 5px;
+          background-color: #f0f0f0;
+          cursor: pointer;
+          font-size: 14px;
+          text-decoration: right;
+        }
+        
+        .time-filter.active {
+          background-color: #007bff;
+          color: white;
+        }
+        
+        .metrics-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+        }
+        
+        .metric-card {
+          padding: 20px;
+          border-radius: 8px;
+          text-align: center;
+          color: white;
+        }
+        
+        .metric-value {
+          font-size: 2em;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        
+        .metric-label {
+          font-size: 1.1em;
+        }
+        
+        .purchase-due {
+          background: linear-gradient(135deg, #8e2de2, #4a00e0);
+        }
+        
+        .sales-due {
+          background: linear-gradient(135deg, #e53935, #b71c1c);
+        }
+        
+        .sales {
+          background: linear-gradient(135deg, #00c853, #007e33);
+        }
+        
+        .expense {
+          background: linear-gradient(135deg, #00bcd4, #00838f);
+        }
+        
+        .customers {
+          background: linear-gradient(135deg, #3f51b5, #283593);
+        }
+        
+        .suppliers {
+          background: linear-gradient(135deg, #607d8b, #37474f);
+        }
+        
+        .purchases {
+          background: linear-gradient(135deg, #795548, #4e342e);
+        }
+        
+        .invoices {
+          background: linear-gradient(135deg, #9e9e9e, #616161);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .metrics-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .metrics-grid {
+            grid-template-columns: 1fr;
+          }
+        }

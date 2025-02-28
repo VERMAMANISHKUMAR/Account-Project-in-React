@@ -1,0 +1,56 @@
+/* Footer Styles */
+.footer {
+          background: #2c3e50;
+          color: white;
+          padding: 15px 0;
+          text-align: center;
+          font-size: 14px;
+          position: relative;
+          width: 100%;
+          bottom: 0;
+        }
+        
+        .footer-container {
+          max-width: 1200px;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .footer-text {
+          margin: 5px 0;
+          opacity: 0.8;
+          transition: opacity 0.3s;
+        }
+        
+        .footer-text:hover {
+          opacity: 1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .footer {
+            font-size: 13px;
+            padding: 12px 0;
+          }
+          
+          .footer-container {
+            flex-direction: column;
+            text-align: center;
+            padding: 0 10px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .footer {
+            font-size: 12px;
+            padding: 10px 0;
+          }
+        
+          .footer-text {
+            margin: 3px 0;
+          }
+        }
+        
