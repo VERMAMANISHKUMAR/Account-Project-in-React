@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build": "react-scripts build",
     "preview": "vite preview",
     "start": "serve -s dist -l $PORT"
    
