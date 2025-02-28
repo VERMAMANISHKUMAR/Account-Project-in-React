@@ -1,32 +1,26 @@
-import React, { useState } from 'react';
-import '../assets/Style/MoneyTransferList.css'; // Import your CSS file
+import React, { useState } from 'react'; // React aur useState hook import kar rhe hain
+import '../assets/Style/MoneyTransferList.css'; // CSS file import kar rhe hain styling ke liye
 
 const MoneyTransferList = () => {
-  const [transferDate, setTransferDate] = useState('');
-  const [debitAccount, setDebitAccount] = useState('');
-  const [creditAccount, setCreditAccount] = useState('');
-  const [users, setUsers] = useState('All');
-  const [entriesPerPage, setEntriesPerPage] = useState(10);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [transferDate, setTransferDate] = useState(''); // transferDate ka state manage kar rhe hain
 
-  // Dummy data (replace with API calls)
+  const [users, setUsers] = useState('All'); // Users dropdown ka state
+  const [entriesPerPage, setEntriesPerPage] = useState(10); // Kitne records ek page pe dikhane hain
+  const [searchTerm, setSearchTerm] = useState(''); // Search bar ke liye state
+
+  // Dummy data (API se data aane par yahan replace karna hoga)
   const transfers = []; 
 
   return (
     <div className="money-transfer-list">
       <div className="header">
         <h1>Cash Transactions<span className="subheader">View/Search Accounts</span></h1>
-        {/* <div className="header-links">
-          <a href="#">Home</a>
-          <span className="separator"></span>
-          <a href="#">Money Transfer List</a>
-        </div> */}
         <p>Home<span> / </span><span>Account List</span></p>
       </div>
 
       <div className="filters">
-      {/* <button className="create-transfer-btn" style={{marginLeft:'46rem'}}>+ Create Transfer</button> */}
         <div className="filter-row">
+          {/* Date selection inputs */}
           <div className="filter-item">
             <label style={{color:'black', fontWeight:'bold'}}>Form Date</label>
             <input type="date" value={transferDate} onChange={(e) => setTransferDate(e.target.value)} />
@@ -35,31 +29,19 @@ const MoneyTransferList = () => {
             <label style={{color:'black', fontWeight:'bold'}}>To Date</label>
             <input type="date" value={transferDate} onChange={(e) => setTransferDate(e.target.value)} />
           </div>
-          {/* <div className="filter-item">
-            <label style={{color:'black', fontWeight:'bold'}}>Debit Account</label>
-            <select value={debitAccount} onChange={(e) => setDebitAccount(e.target.value)}>
-              <option value="">Select</option>
-             
-            </select>
-          </div> */}
-          {/* <div className="filter-item">
-            <label style={{color:'black', fontWeight:'bold'}}>Credit Account</label>
-            <select value={creditAccount} onChange={(e) => setCreditAccount(e.target.value)}>
-              <option value="">Select</option>
-              
-            </select>
-          </div> */}
+          
+          {/* Users dropdown */}
           <div className="filter-item">
             <label style={{color:'black', fontWeight:'bold'}}>Users</label>
             <select value={users} onChange={(e) => setUsers(e.target.value)}>
               <option value="All">All</option>
-              {/* Add user options */}
+              {/* Users dynamically add honge */}
             </select>
           </div>
         </div>
-        
       </div>
 
+      {/* Table controls section */}
       <div className="table-controls">
         <div className="entries-per-page">
           <label>Show</label>
@@ -72,16 +54,17 @@ const MoneyTransferList = () => {
           <label>entries</label>
         </div>
         <div className="table-actions">
-          <button>Copy</button>
-          <button>Excel</button>
-          <button>PDF</button>
-          <button>Print</button>
-          <button>CSV</button>
-          <button>Columns</button>
+          <button>Copy</button> {/* Table data copy karne ke liye */}
+          <button>Excel</button> {/* Table ko Excel format me export */}
+          <button>PDF</button> {/* Table ko PDF format me export */}
+          <button>Print</button> {/* Print karne ke liye */}
+          <button>CSV</button> {/* Table ko CSV me convert */}
+          <button>Columns</button> {/* Column visibility toggle */}
           <input type="text" placeholder="Search:" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         </div>
       </div>
 
+      {/* Transactions table */}
       <table className="transfer-table">
         <thead>
           <tr>
@@ -119,6 +102,7 @@ const MoneyTransferList = () => {
         </tbody>
       </table>
 
+      {/* Pagination */}
       <div className="pagination">
         <div className="pagination-info">Showing 0 to 0 of 0 entries</div>
         <div className="pagination-controls">
