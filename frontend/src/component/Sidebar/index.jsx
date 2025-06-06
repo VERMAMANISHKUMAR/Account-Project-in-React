@@ -58,6 +58,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <AiOutlineTransaction />
           <span>Cash Transaction</span>
         </SidebarLink>
+     
+        
       </SidebarMenu>
     </SidebarContainer>
   );

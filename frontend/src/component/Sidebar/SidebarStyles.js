@@ -194,3 +194,4 @@ export const SidebarSection = styled.div`
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   }
 `;
+// ----------------------
